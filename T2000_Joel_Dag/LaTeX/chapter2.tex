@@ -1,0 +1,94 @@
+% !TEX root =  master.tex
+\chapter{Auswahl der Tools und der Umgebung}
+
+In diesem Kapitel ...
+
+- Hier kurz einmal Erklären welche Tools verwendet werden und evtl. 1-2 Sätze zu jedem.
+
+- Erläutern wie nach welchen Kriterien die Tools verglichen werden
+
+- Erläutern, dass der Juice Shop als Zielsystem verwendet wird. Oder doch vlt WAVSEP ? - WAVSEP Ist denke ich bessser, weils extra dafür gemacht ist + eine umfangreichere Sammlung an Schwachstellen hat
+https://github.com/sectooladdict/wavsep
+\url{https://owasp.org/www-project-benchmark/}
+
+http://projects.webappsec.org/w/page/13246986/Web%20Application%20Security%20Scanner%20Evaluation%20Criteria
+
+\url{https://norma.ncirl.ie/4165/1/mandarprashantshah.pdf}
+
+
+Scanner: nmap, sslscan, nikto
+nmap
+sslscan
+fuff
+sql map
+nikto
+nuclei
+burp community,
+metasploit
+
+Unterschiedung Kategorisierung der Tools
+
+wstg owasp, vergleichbar gegenüber halten
+
+
+\section{Testkriterien}
+
+Um die Auswertung und Validierung der Tests möglichst strukturiert zu gestalten werden nachfolgend Kriterien festgelegt, nach denen die einzelnen Tools und Techniken verglichen werden.
+Hierfür werden bereits vorhandene und gängige Kriterien mit zusätzlich weiteren wichtigen Kriterien kombiniert.
+
+Paar Kriterien (Brainstorming):
+\url{https://norma.ncirl.ie/4165/1/mandarprashantshah.pdf}
+\begin{itemize}
+	\item \textbf{(Scanning) Speed} 
+	\item \textbf{Vulnerability Detection Rate} 
+	\item \textbf{True Positive and False Positive reported} 
+	\item \textbf{Einfache Bedienung und Nachvollziehbarkeit} \\
+	dd
+\end{itemize}
+
+
+
+\subsection{OWSAP Benchmark test}
+Der OWASP Benchmark test ist eine Java basierte open source Tetsumgebung zur Erkennung von Schwachstellen.
+OWASP benchmark ist eine bewährte Testumgebung, die regelmäßig geupdatet wird. Die Testumgebung umfasst dabei über 2740 potentielle Schwachstellen.
+
+Um den Testdurchlauf möglichst strukturiert und systematisch zu gestalten, werden nachfolgend Kriterien aufgestellt, nach denen die einzelnen Tools und Techniken verglichen werden. 
+
+In den bisherigen Abschnitten dieser Arbeit haben wir uns bereits mit den Grundlagen von Pentesting, sowie der generellen Vorgehensweisen und Pentesting Frameorks beschäftigt. 
+Unter zahlreichen möglichen Zielsystem hat sich das Framework OWASP Benchamrk zum Testen und Vergleichen verschiedener Pentesting Tools als sehr geeignet bewährt.
+OWASP Benchmark bietet dazu zahlreiche Testcases und wird immernoch aktiv geupdatet. 
+
+Eines dieser Frameworks
+
+\section{Auswahl der Tools}
+
+Kategorisierung: In dieser Arbeit werden 
+
+
+\section{Zielsystem}
+
+Um die Zuverlässigkeit während dem Vergleich der einzelnen Tools zu gewährleisten, ist es wichtig die richtige Testumgebung zu wählen. 
+Nachfolgend werden einige Kriterien beschrieben, die eine passende Testumgebung benötigt:
+
+\begin{itemize}
+	\item \textbf{Umfassende Abdeckung} \\
+	Die Testumgebung sollte eine Vielzahl bekannter Schwachstellen und Angriffsszenarien bereitstellen, um ein umfassendes Testen der Tools zu ermöglichen.
+	\item \textbf{Konsistenz} \\
+	Damit die Unterschiede, sowie Vor- und Nachteile der einzelnen Tools aufgedeckt werden können, sollte die Testumgebung möglichst einheitliche Verfahren und Messmethoden bereitstellen.
+	\item \textbf{Realitätsnähe} \\
+	Die zu untersuchenden Tools begleiten zahlreiche Pentester täglich in realen Szenarien.
+	Daher sollen die in der Testumgebung bereitgestellten Angriffsszenarien und Schwachstellen möglichst realitätsnah sein. 
+	\item \textbf{Einfache Bedienung und Nachvollziehbarkeit} \\
+	Die Testumgebung sollte eine einfache Bedingung und eine Dokumentation bereitstellen um eine schnelle und problemlose Verwendung zu ermöglichen.
+	Außerdem sollten die Ergebnisse und Methodiken seitens der Testumgebung nachvollziehbar sein.
+\end{itemize}
+
+Aufgrund der aufgestellten Kriterien wird das Web Application Vulnerability Scanner Evaluation Project (WAVSEP) als adäquate Testumgebung gewählt. WAVSEP ist eine bewährte Testumgebung, die auf den Vergleich von Pentestools ausgelegt ist.  \\
+Dabei bietet WAVSEP ein umfassendes Set an passende Angriffsszenarien, die optimale Bedingungen schaffen, um die Genauigkeit und Zuverlässigkeit von Pentesttools direkt miteinander zu vergleichen.
+Dabei verwendet WAVSEP einheitliche und nachvollziehbare Messmethoden, die den direkten Vergleich einzelner Tools erleichtern. \\
+WAVSEP ist daher eine hervorragende Wahl für die Bewertung von Penetrationstools.
+
+\section{Testumgebung}
+Die Durchführung der Tests findet auf einer Kali Linux VW mit einer Windows host Maschine statt. 
+Um das Testen zu ermöglichen muss zunächst alle nötige Software installiert werden, um das Zielsystem schließlich angreifen zu können
+
