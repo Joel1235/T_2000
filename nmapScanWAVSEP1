@@ -1,0 +1,67 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-02-13 07:23 EST
+NSE: Loaded 149 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 07:23
+Stats: 0:00:11 elapsed; 0 hosts completed (0 up), 0 undergoing Script Pre-Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 87.50% done; ETC: 07:23 (0:00:02 remaining)
+Completed NSE at 07:23, 34.10s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 07:23
+Completed NSE at 07:23, 0.00s elapsed
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Initiating Ping Scan at 07:23
+Scanning 127.0.0.1 [2 ports]
+Completed Ping Scan at 07:23, 0.01s elapsed (1 total hosts)
+Initiating Connect Scan at 07:23
+Scanning localhost (127.0.0.1) [1 port]
+Discovered open port 8080/tcp on 127.0.0.1
+Completed Connect Scan at 07:23, 0.00s elapsed (1 total ports)
+Initiating Service scan at 07:23
+Scanning 1 service on localhost (127.0.0.1)
+Completed Service scan at 07:23, 6.01s elapsed (1 service on 1 host)
+NSE: Script scanning 127.0.0.1.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 07:23
+NSE: [firewall-bypass 127.0.0.1] lacks privileges.
+NSE Timing: About 98.65% done; ETC: 07:24 (0:00:00 remaining)
+Completed NSE at 07:24, 33.41s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 07:24
+NSE: [tls-ticketbleed 127.0.0.1:8080] Not running due to lack of privileges.
+Completed NSE at 07:24, 0.01s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up, received conn-refused (0.0053s latency).
+Scanned at 2023-02-13 07:23:39 EST for 40s
+
+PORT     STATE SERVICE REASON  VERSION
+8080/tcp open  http    syn-ack Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-enum: 
+|   /examples/: Sample scripts
+|   /manager/html/upload: Apache Tomcat (401 Unauthorized)
+|   /manager/html: Apache Tomcat (401 Unauthorized)
+|_  /docs/: Potentially interesting folder
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 07:24
+Completed NSE at 07:24, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 07:24
+Completed NSE at 07:24, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 74.23 seconds
